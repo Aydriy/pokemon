@@ -1,0 +1,63 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "prettier",
+        "eslint-config-prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "prettier",
+        "unused-imports"
+    ],
+    "rules": {
+        "no-nested-ternary": "off",
+
+        "no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
+        "unused-imports/no-unused-imports": "error",
+        "unused-imports/no-unused-vars": [
+            "warn",
+            { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
+        ],
+        "prettier/prettier": [
+            "error"
+        ],
+        "react/react-in-jsx-scope": "off",
+        "react/require-default-props": "off",
+        "react/prop-types": "off",
+        "react/jsx-filename-extension": "off",
+        "react/function-component-definition": "off",
+        "react/jsx-props-no-spreading": "off",
+        "no-undef": "off",
+        "import/no-unresolved": "off",
+        "import/extensions": "off",
+        "jsx-a11y/anchor-is-valid": "off",
+        "import/prefer-default-export": "off",
+        "react/jsx-no-useless-fragment": "off",
+        "react-hooks/exhaustive-deps": "off",
+        "react/no-unescaped-entities": "off",
+        "react/display-name": "off",
+        "no-param-reassign": ["error",
+            {
+                "props": true,
+                "ignorePropertyModificationsFor": [
+                    "state", "ctx"
+                ]
+            }],
+        "no-shadow": "off",
+        "@typescript-eslint/no-shadow": ["error", { "ignoreTypeValueShadow": true }]
+
+    }
+}
